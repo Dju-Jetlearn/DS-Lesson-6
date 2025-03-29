@@ -25,3 +25,24 @@ clr = ['c', 'm', 'r', 'y', 'r', 'g', 'b']
 mp.pie(hours, labels = activities, colors = clr, startangle = 90, shadow = False)
 mp.title("Pie Chart")
 mp.show()
+
+days = [1, 2, 3, 4, 5, 6, 7]
+sleeping = [9, 9, 9, 9, 9, 8, 7]
+eating = [3, 3, 3, 3, 3, 4, 4]
+working = [10, 9, 11, 10, 7, 2, 2]
+sport = [1, 2, 0, 0, 1, 1, 1]
+relaxing = [1, 1, 1, 1, 1, 9, 10]
+
+mp.plot([], [], color = 'g', label = "Sleeping", linewidth = 5)
+mp.plot([], [], color = 'y', label = "Eating", linewidth = 5)
+mp.plot([],[], color = 'b', label = "Working", linewidth = 5)
+mp.plot([], [], color = 'c', label = "Sport", linewidth = 5)
+mp.plot([], [], color = 'r', label = "Relaxing", linewidth = 5)
+
+mp.stackplot(days, sleeping, eating, working, sport, relaxing, colors = ['g', 'y', 'b', 'c', 'r'])
+
+mp.xlabel("X")
+mp.ylabel("Y")
+mp.title("Stackplot")
+mp.legend()
+mp.show()
